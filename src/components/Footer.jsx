@@ -10,11 +10,12 @@ function Footer() {
           {/* Colonne 1 - Infos personnelles */}
           <div>
             <h3 className="text-xl font-bold mb-4">Lavarde Corentin</h3>
-            <p className="text-gray-400 mb-2">Développeur Web </p>
+            <p className="text-gray-400 mb-2">Concepteur Développeur d'Applications </p>
+            <p className="text-gray-400 mb-2">Stage du 25/08 au 19/09</p>
             <p className="text-gray-400 mb-4">Barlin, France</p>
             <p className="text-gray-400">
               <a
-                href="corentin.lavarde@gmail.com"
+                href="mailto:corentin.lavarde@gmail.com"
                 className="hover:text-indigo-400 transition duration-300"
               >
                 corentin.lavarde@gmail.com
@@ -81,7 +82,7 @@ function Footer() {
                 </svg>
               </a>
               <a
-                href="www.linkedin.com/in/lavarde"
+                href="https://www.linkedin.com/in/lavarde"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gray-800 hover:bg-indigo-600 text-gray-50 p-3 rounded-full transition duration-300"

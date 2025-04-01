@@ -11,10 +11,10 @@ function Hero() {
           </span>
         </h1>
         <h2 className="text-2xl md:text-3xl mb-6">
-          Développeur Web 
+          Concepteur Développeur d'Applications
         </h2>
         <p className="text-xl max-w-2xl mb-8">
-          Je crée des applications web modernes et performantes
+          À la recherche d'un stage du 25/08 au 19/09
         </p>
         <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
           <a

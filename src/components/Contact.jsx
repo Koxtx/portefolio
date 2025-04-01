@@ -1,20 +1,21 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 
 function Contact() {
   return (
     <section id="contact" className="py-16 bg-gray-100 dark:bg-gray-900">
-      <div className="container  mx-auto px-4">
+      <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12 text-gray-800 dark:text-gray-50">
           Me Contacter
         </h2>
         <div className="flex flex-col items-center justify-center md:flex-row space-y-8 md:space-y-0 md:space-x-8">
           <div className="md:w-1/2 bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md">
             <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-50">
-              Restons en contact
+              À la recherche d'un stage
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              N'hésitez pas à me contacter pour discuter de projets ou
-              d'opportunités.
+              Je suis actuellement à la recherche d'un stage en Concepteur
+              Développeur d'Applications du 25/08 au 19/09. N'hésitez pas à me
+              contacter pour échanger sur vos projets ou opportunités.
             </p>
             <div className="space-y-4 mb-8">
               <div className="flex items-center">
@@ -80,7 +81,7 @@ function Contact() {
                 </svg>
               </a>
               <a
-                href="www.linkedin.com/in/lavarde"
+                href="https://www.linkedin.com/in/lavarde"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400"

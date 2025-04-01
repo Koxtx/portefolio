@@ -1,9 +1,7 @@
 import React, { useState, useContext } from "react";
-import { ThemeContext } from "../context/ThemeContext";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
 
   return (
     <header className="sticky top-0 z-50 bg-gray-50 dark:bg-gray-800 shadow-md">
@@ -38,14 +36,11 @@ function Header() {
           >
             Contact
           </a>
-
-          
         </nav>
 
         {/* Menu pour mobile */}
         <div className="md:hidden flex items-center space-x-4">
           {/* Bouton de basculement thème pour mobile */}
-         
 
           {/* Bouton menu burger */}
           <button

@@ -4,7 +4,7 @@ function Skills() {
   const skillCategories = [
     {
       category: "Front-end",
-      skills: ["HTML5", "CSS3", "JavaScript", "React", "Tailwind CSS", "SASS"],
+      skills: ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS", "Sass"],
     },
     {
       category: "Back-end",
@@ -15,7 +15,7 @@ function Skills() {
       skills: ["MongoDB", "MySQL", "Firebase"],
     },
     {
-      category: "Outils",
+      category: "Outils & Méthodes",
       skills: ["Git", "GitHub", "VS Code", "Docker", "Figma"],
     },
   ];

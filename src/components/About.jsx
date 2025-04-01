@@ -12,24 +12,17 @@ function About() {
             <div className="rounded-full overflow-hidden w-48 h-48 mx-auto shadow-lg">
               <img
                 src="../../photos/photos_profil.jpg"
-                alt="Votre Nom"
+                alt="Corentin Lavarde"
                 className="rounded-full w-96 h-96"
               />
             </div>
           </div>
           <div className="md:w-2/3">
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-4">
-              Je suis un développeur web passionné par la création
-              d'applications web intuitives et performantes. Avec une solide
-              expérience en développement front-end et back-end, je m'efforce de
-              construire des produits qui résolvent des problèmes réels.
+              Actuellement en formation Concepteur Développeur d'Application, je recherche un stage du 25/08 au 19/09 pour mettre en pratique mes compétences en entreprise.
             </p>
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-              Mon parcours dans le développement web a commencé il y a [X
-              années], et depuis, j'ai travaillé sur divers projets allant des
-              applications web complexes aux sites vitrines élégants. Je suis
-              constamment en train d'apprendre de nouvelles technologies et
-              techniques pour améliorer mes compétences.
+              Au cours de ma formation, j'ai renforcé mes compétences en développement front-end et back-end. J'ai appris à concevoir des applications sécurisées, définir une architecture logicielle, gérer des bases de données SQL/NoSQL et contribuer à la gestion de projet.
             </p>
             <div className="flex flex-wrap gap-2">
               <a
@@ -49,7 +42,7 @@ function About() {
                 GitHub
               </a>
               <a
-                href="www.linkedin.com/in/lavarde"
+                href="https://www.linkedin.com/in/lavarde"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 py-2 bg-blue-600 text-gray-50 font-medium rounded-lg hover:bg-blue-700 transition duration-300"
