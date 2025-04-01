@@ -9,6 +9,18 @@
       src="https://kit.fontawesome.com/e4159c9e3c.js"
       crossorigin="anonymous"
     ></script>
+    <script>
+      // Check for dark mode preference at the highest level to prevent FOUC
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
