@@ -19,10 +19,16 @@ function About() {
           </div>
           <div className="md:w-2/3">
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-4">
-              Actuellement en formation Concepteur Développeur d'Application, je recherche un stage du 25/08 au 19/09 pour mettre en pratique mes compétences en entreprise.
+              Actuellement en formation Concepteur Développeur d'Application, je
+              recherche un stage du 25/08 au 19/09 pour mettre en pratique mes
+              compétences en entreprise.
             </p>
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-              Au cours de ma formation, j'ai renforcé mes compétences en développement front-end et back-end. J'ai appris à concevoir des applications sécurisées, définir une architecture logicielle, gérer des bases de données SQL/NoSQL et contribuer à la gestion de projet.
+              Au cours de ma formation, j'ai renforcé mes compétences en
+              développement front-end et back-end. J'ai appris à concevoir des
+              applications sécurisées, définir une architecture logicielle,
+              gérer des bases de données SQL/NoSQL et contribuer à la gestion de
+              projet.
             </p>
             <div className="flex flex-wrap gap-2">
               <a
