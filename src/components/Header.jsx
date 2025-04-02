@@ -10,7 +10,7 @@ function Header() {
           <span>Lavarde Corentin</span>
         </div>
 
-        {/* Navigation desktop */}
+       
         <nav className="hidden md:flex items-center space-x-8">
           <a
             href="#about"
@@ -38,11 +38,11 @@ function Header() {
           </a>
         </nav>
 
-        {/* Menu pour mobile */}
+       
         <div className="md:hidden flex items-center space-x-4">
-          {/* Bouton de basculement thème pour mobile */}
+        
 
-          {/* Bouton menu burger */}
+         
           <button
             className="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -69,7 +69,7 @@ function Header() {
         </div>
       </div>
 
-      {/* Menu mobile déroulant */}
+     
       {isMenuOpen && (
         <nav className="md:hidden bg-gray-50 dark:bg-gray-800 py-4 px-4 shadow-lg">
           <ul className="space-y-4">

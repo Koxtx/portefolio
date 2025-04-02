@@ -7,7 +7,7 @@ function Footer() {
     <footer className="bg-gray-900 text-gray-50 py-10">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Colonne 1 - Infos personnelles */}
+          
           <div>
             <h3 className="text-xl font-bold mb-4">Lavarde Corentin</h3>
             <p className="text-gray-400 mb-2">Concepteur Développeur d'Applications </p>
@@ -23,7 +23,7 @@ function Footer() {
             </p>
           </div>
 
-          {/* Colonne 2 - Liens rapides */}
+         
           <div>
             <h3 className="text-xl font-bold mb-4">Liens Rapides</h3>
             <ul className="space-y-2">
@@ -62,7 +62,7 @@ function Footer() {
             </ul>
           </div>
 
-          {/* Colonne 3 - Réseaux sociaux */}
+         
           <div>
             <h3 className="text-xl font-bold mb-4">Me Suivre</h3>
             <div className="flex space-x-4">
@@ -100,10 +100,10 @@ function Footer() {
           </div>
         </div>
 
-        {/* Ligne de séparation */}
+      
         <div className="border-t border-gray-800 my-8"></div>
 
-        {/* Copyright */}
+       
         <div className="text-center">
           <p className="text-gray-300">
             © {currentYear} Lavarde Corentin. Tous droits réservés.

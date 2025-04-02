@@ -1,4 +1,4 @@
-// Modification de Projects.jsx
+
 import React, { useState, useEffect } from "react";
 
 function Projects() {
@@ -6,7 +6,7 @@ function Projects() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Remplacez 'yourusername' par votre nom d'utilisateur GitHub
+  
   const username = "Koxtx";
 
   useEffect(() => {
@@ -23,13 +23,13 @@ function Projects() {
 
         const data = await response.json();
 
-        // Transformer les données pour correspondre à notre format
+        
         const formattedProjects = data.map((repo) => ({
           id: repo.id,
           title: repo.name,
           description: repo.description || "Pas de description disponible.",
-          image: "/images/project-placeholder.jpg", // Image par défaut
-          technologies: [repo.language].filter(Boolean), // Langage principal
+          image: "/images/project-placeholder.jpg", 
+          technologies: [repo.language].filter(Boolean), 
           githubLink: repo.html_url,
           demoLink: repo.homepage || "#",
           stars: repo.stargazers_count,
@@ -74,7 +74,7 @@ function Projects() {
                   {project.description}
                 </p>
 
-                {/* Technologie principale et statistiques */}
+                
                 <div className="flex justify-between items-center mb-4">
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (

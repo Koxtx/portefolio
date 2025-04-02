@@ -1,5 +1,6 @@
 import React from "react";
 
+
 function About() {
   return (
     <section id="about" className="py-16 bg-gray-50 dark:bg-gray-800">
@@ -32,7 +33,7 @@ function About() {
             </p>
             <div className="flex flex-wrap gap-2">
               <a
-                href="../../cv/CV_LAVARDE_corentin_stage_CDA.pdf"
+                href="https://zupimages.net/viewer.php?id=25/14/orcw.jpg"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 py-2 bg-indigo-600 text-gray-50 font-medium rounded-lg hover:bg-indigo-700 transition duration-300"
