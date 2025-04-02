@@ -1,7 +1,8 @@
 import React from "react";
 
-
 function About() {
+  const photoUrl = "https://zupimages.net/up/25/14/orcw.jpg";
+
   return (
     <section id="about" className="py-16 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-4">
@@ -12,7 +13,7 @@ function About() {
           <div className="md:w-1/3 mb-8 md:mb-0">
             <div className="rounded-full overflow-hidden w-48 h-48 mx-auto shadow-lg">
               <img
-                src="../../photos/photos_profil.jpg"
+                src={photoUrl}
                 alt="Corentin Lavarde"
                 className="rounded-full w-96 h-96"
               />
@@ -33,7 +34,7 @@ function About() {
             </p>
             <div className="flex flex-wrap gap-2">
               <a
-                href="https://zupimages.net/viewer.php?id=25/14/orcw.jpg"
+                href="../../cv/CV_LAVARDE_corentin_stage_CDA.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 py-2 bg-indigo-600 text-gray-50 font-medium rounded-lg hover:bg-indigo-700 transition duration-300"
