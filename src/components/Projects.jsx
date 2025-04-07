@@ -10,24 +10,49 @@ function Projects() {
   const username = "Koxtx";
 
   useEffect(() => {
-    const fetchProjects = async () => {
+    const fetchProjectsWithLanguages = async () => {
       try {
         setLoading(true);
-        const response = await fetch(
-          `https://api.github.com/users/${username}/repos?per_page=100` // Récupérer plus de repos
+        // 1. Récupérer la liste des repos
+        const reposResponse = await fetch(
+          `https://api.github.com/users/${username}/repos?per_page=100`
         );
 
-        if (!response.ok) {
+        if (!reposResponse.ok) {
           throw new Error("Erreur lors de la récupération des repos GitHub");
         }
 
-        const data = await response.json();
+        const reposData = await reposResponse.json();
         
-        const formattedProjects = data.map((repo) => ({
+        // 2. Pour chaque repo, récupérer ses langages
+        const reposWithLanguages = await Promise.all(
+          reposData.map(async (repo) => {
+            try {
+              const languagesResponse = await fetch(repo.languages_url);
+              const languagesData = await languagesResponse.json();
+              
+              // Extraire les noms des langages depuis l'objet retourné par l'API
+              const languages = Object.keys(languagesData);
+              
+              return {
+                ...repo,
+                allLanguages: languages
+              };
+            } catch (error) {
+              console.error(`Erreur lors de la récupération des langages pour ${repo.name}:`, error);
+              return {
+                ...repo,
+                allLanguages: repo.language ? [repo.language] : []
+              };
+            }
+          })
+        );
+
+        const formattedProjects = reposWithLanguages.map((repo) => ({
           id: repo.id,
           title: repo.name,
           description: repo.description || "Pas de description disponible.",
-          technologies: [repo.language].filter(Boolean), 
+          technologies: repo.allLanguages,
           githubLink: repo.html_url,
           demoLink: repo.homepage || "#",
           stars: repo.stargazers_count,
@@ -45,7 +70,7 @@ function Projects() {
       }
     };
 
-    fetchProjects();
+    fetchProjectsWithLanguages();
   }, [username]);
 
   const loadMoreProjects = () => {
@@ -85,16 +110,22 @@ function Projects() {
                   {project.description}
                 </p>
 
-                <div className="flex justify-between items-center mb-4">
+                <div className="flex flex-col space-y-4 mb-4">
                   <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 text-sm font-medium rounded-full"
-                      >
-                        {tech}
+                    {project.technologies && project.technologies.length > 0 ? (
+                      project.technologies.map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 text-sm font-medium rounded-full"
+                        >
+                          {tech}
+                        </span>
+                      ))
+                    ) : (
+                      <span className="text-gray-500 dark:text-gray-400 text-sm">
+                        Pas de technologies spécifiées
                       </span>
-                    ))}
+                    )}
                   </div>
                   <div className="flex items-center text-gray-500 dark:text-gray-400 text-sm">
                     <span className="flex items-center mr-3">
