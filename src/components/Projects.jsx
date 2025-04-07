@@ -1,11 +1,11 @@
-
 import React, { useState, useEffect } from "react";
 
 function Projects() {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
+  const [displayCount, setDisplayCount] = useState(6); // Nombre initial de projets à afficher
+  const [initialCount] = useState(6); // Garde en mémoire le nombre initial pour pouvoir y revenir
   
   const username = "Koxtx";
 
@@ -14,7 +14,7 @@ function Projects() {
       try {
         setLoading(true);
         const response = await fetch(
-          `https://api.github.com/users/${username}/repos?sort=updated&per_page=6`
+          `https://api.github.com/users/${username}/repos?per_page=100` // Récupérer plus de repos
         );
 
         if (!response.ok) {
@@ -22,13 +22,11 @@ function Projects() {
         }
 
         const data = await response.json();
-
         
         const formattedProjects = data.map((repo) => ({
           id: repo.id,
           title: repo.name,
           description: repo.description || "Pas de description disponible.",
-          image: "/images/project-placeholder.jpg", 
           technologies: [repo.language].filter(Boolean), 
           githubLink: repo.html_url,
           demoLink: repo.homepage || "#",
@@ -36,7 +34,10 @@ function Projects() {
           forks: repo.forks_count,
         }));
 
-        setProjects(formattedProjects);
+        // Trier les projets par nombre d'étoiles (ordre décroissant)
+        const sortedProjects = formattedProjects.sort((a, b) => b.stars - a.stars);
+
+        setProjects(sortedProjects);
         setLoading(false);
       } catch (error) {
         setError(error.message);
@@ -46,6 +47,16 @@ function Projects() {
 
     fetchProjects();
   }, [username]);
+
+  const loadMoreProjects = () => {
+    // Augmenter le nombre de projets affichés
+    setDisplayCount(prevCount => prevCount + 6);
+  };
+
+  const showLessProjects = () => {
+    // Retour au nombre initial de projets
+    setDisplayCount(initialCount);
+  };
 
   if (loading)
     return <div className="text-center py-20">Chargement des projets...</div>;
@@ -61,7 +72,7 @@ function Projects() {
           Mes Projets
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
+          {projects.slice(0, displayCount).map((project) => (
             <div
               key={project.id}
               className="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105"
@@ -74,7 +85,6 @@ function Projects() {
                   {project.description}
                 </p>
 
-                
                 <div className="flex justify-between items-center mb-4">
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
@@ -137,6 +147,29 @@ function Projects() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Boutons pour contrôler l'affichage */}
+        <div className="text-center mt-10 flex justify-center gap-4">
+          {/* Bouton "Afficher plus" - visible uniquement s'il y a plus de projets à montrer */}
+          {projects.length > displayCount && (
+            <button
+              onClick={loadMoreProjects}
+              className="px-6 py-3 bg-indigo-500 text-gray-50 font-medium rounded-lg hover:bg-indigo-600 transition duration-300"
+            >
+              Afficher plus de projets
+            </button>
+          )}
+          
+          {/* Bouton "Afficher moins" - visible uniquement si on affiche plus que le nombre initial */}
+          {displayCount > initialCount && (
+            <button
+              onClick={showLessProjects}
+              className="px-6 py-3 bg-gray-500 text-gray-50 font-medium rounded-lg hover:bg-gray-600 transition duration-300"
+            >
+              Afficher moins de projets
+            </button>
+          )}
         </div>
 
         <div className="text-center mt-10">
