@@ -1,9 +1,23 @@
 @import "tailwindcss";
 
+.active {
+  @apply text-red-500;
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    @apply transition-colors duration-500 ease-in-out;
+  }
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-transparent: transparent;
   --color-current: currentColor;
-  --color-white: #fffff;
+  --color-white: #ffffff;
   --color-purple: #3f3cbb;
   --color-midnight: #121063;
   --color-metal: #565584;

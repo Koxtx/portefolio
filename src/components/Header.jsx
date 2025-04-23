@@ -1,7 +1,11 @@
 import React, { useState, useContext } from "react";
+import { ThemeContext } from "../contexts/ThemeContext";
+import { MdDarkMode } from "react-icons/md";
+import { CiLight } from "react-icons/ci";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
     <header className="sticky top-0 z-50 bg-gray-50 dark:bg-gray-800 shadow-md">
@@ -10,8 +14,19 @@ function Header() {
           <span>Lavarde Corentin</span>
         </div>
 
-       
         <nav className="hidden md:flex items-center space-x-8">
+          <div className="flex items-center gap-4 mr-4">
+            <button
+              onClick={toggleTheme}
+              className="text-xl hover:text-blue-400 transition"
+            >
+              {theme === "dark" ? (
+                <CiLight className="text-white hover:text-blue-400 " />
+              ) : (
+                <MdDarkMode />
+              )}
+            </button>
+          </div>
           <a
             href="#about"
             className="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400"
@@ -38,11 +53,7 @@ function Header() {
           </a>
         </nav>
 
-       
         <div className="md:hidden flex items-center space-x-4">
-        
-
-         
           <button
             className="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -69,7 +80,6 @@ function Header() {
         </div>
       </div>
 
-     
       {isMenuOpen && (
         <nav className="md:hidden bg-gray-50 dark:bg-gray-800 py-4 px-4 shadow-lg">
           <ul className="space-y-4">
@@ -110,6 +120,14 @@ function Header() {
               </a>
             </li>
           </ul>
+          <div className="flex items-center gap-4 mr-4">
+            <button
+              onClick={toggleTheme}
+              className="text-xl hover:text-blue-400 transition"
+            >
+              {theme === "dark" ? <CiLight /> : <MdDarkMode />}
+            </button>
+          </div>
         </nav>
       )}
     </header>
