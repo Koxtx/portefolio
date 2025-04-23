@@ -125,7 +125,7 @@ function Header() {
               onClick={toggleTheme}
               className="text-xl hover:text-blue-400 transition"
             >
-              {theme === "dark" ? <CiLight /> : <MdDarkMode />}
+              {theme === "dark" ? <CiLight className="text-white hover:text-blue-400 " /> : <MdDarkMode />}
             </button>
           </div>
         </nav>
