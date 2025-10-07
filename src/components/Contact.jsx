@@ -9,14 +9,15 @@ function Contact() {
         </h2>
         <div className="flex flex-col items-center justify-center md:flex-row space-y-8 md:space-y-0 md:space-x-8">
           <div className="md:w-1/2 bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-50">
-              À la recherche d'un stage
-            </h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-6">
-              Je suis actuellement à la recherche d'un stage en Concepteur
-              Développeur d'Applications du 25/08 au 19/09. N'hésitez pas à me
-              contacter pour échanger sur vos projets ou opportunités.
-            </p>
+          <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-50">
+  À la recherche d’une opportunité professionnelle
+</h3>
+<p className="text-gray-600 dark:text-gray-300 mb-6">
+  Ouvert aux postes en CDI, CDD ou stage, je souhaite mettre à profit mes
+  compétences en JavaScript, React, Node.js et MongoDB pour participer à la
+  création d’applications performantes et sécurisées. N’hésitez pas à me
+  contacter pour échanger sur vos projets ou besoins.
+</p>
             <div className="space-y-4 mb-8">
               <div className="flex items-center">
                 <svg

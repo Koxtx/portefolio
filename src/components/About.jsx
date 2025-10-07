@@ -2,7 +2,7 @@ import React from "react";
 
 function About() {
   const photoUrl = "https://zupimages.net/up/25/14/orcw.jpg";
-  const cv = "https://zupimages.net/viewer.php?id=25/14/r9qr.jpg";
+  const cv = "https://zupimages.net/viewer.php?id=25/41/wl53.jpeg";
 
   return (
     <section id="about" className="py-16 bg-gray-50 dark:bg-gray-800">
@@ -21,18 +21,17 @@ function About() {
             </div>
           </div>
           <div className="md:w-2/3">
-            <p className="text-lg text-gray-600 dark:text-gray-300 mb-4">
-              Actuellement en formation Concepteur Développeur d'Application, je
-              recherche un stage du 25/08 au 19/09 pour mettre en pratique mes
-              compétences en entreprise.
-            </p>
-            <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-              Au cours de ma formation, j'ai renforcé mes compétences en
-              développement front-end et back-end. J'ai appris à concevoir des
-              applications sécurisées, définir une architecture logicielle,
-              gérer des bases de données SQL/NoSQL et contribuer à la gestion de
-              projet.
-            </p>
+          <p className="text-lg text-gray-600 dark:text-gray-300 mb-4">
+  Récemment diplômé en Conception et Développement d’Applications, j’ai renforcé
+  mes compétences en développement front-end et back-end. J’aime concevoir des
+  applications sécurisées, définir une architecture logicielle et structurer des
+  bases de données SQL/NoSQL.
+</p>
+<p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
+  Passionné par le développement backend, je recherche une opportunité au sein
+  d’une équipe où je pourrai continuer à apprendre, contribuer à des projets
+  concrets et évoluer professionnellement.
+</p>
             <div className="flex flex-wrap gap-2">
               <a
                 href={cv}
