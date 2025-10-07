@@ -18,7 +18,7 @@ function Header() {
           <div className="flex items-center gap-4 mr-4">
             <button
               onClick={toggleTheme}
-              className="text-xl hover:text-blue-400 transition"
+              className="text-xl hover:text-blue-400 transition cursor-pointer"
             >
               {theme === "dark" ? (
                 <CiLight className="text-white hover:text-blue-400 " />
