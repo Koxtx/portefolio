@@ -120,7 +120,7 @@ function Header() {
               </a>
             </li>
           </ul>
-          <div className="flex items-center gap-4 mr-4">
+          <div className="flex items-center gap-4 mr-4 mt-4">
             <button
               onClick={toggleTheme}
               className="text-xl hover:text-blue-400 transition"
