@@ -2,7 +2,7 @@ import React from "react";
 
 function About() {
   const photoUrl = "https://zupimages.net/up/25/14/orcw.jpg";
-  const cv = "https://zupimages.net/viewer.php?id=25/41/wl53.jpeg";
+  
 
   return (
     <section id="about" className="py-16 bg-gray-50 dark:bg-gray-800">
@@ -33,14 +33,7 @@ function About() {
   concrets et évoluer professionnellement.
 </p>
             <div className="flex flex-wrap gap-2">
-              <a
-                href={cv}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 bg-indigo-600 text-gray-50 font-medium rounded-lg hover:bg-indigo-700 transition duration-300"
-              >
-                Télécharger CV
-              </a>
+           
               <a
                 href="https://github.com/Koxtx"
                 target="_blank"
