@@ -11,10 +11,10 @@ function Hero() {
   </span>
 </h1>
 <h2 className="text-2xl md:text-3xl mb-6">
-  Développeur Backend / Full Stack JavaScript
+  Développeur Web
 </h2>
 <p className="text-xl max-w-2xl mb-8">
-  À la recherche d’une première expérience professionnelle (CDI, CDD ou stage)
+  À la recherche d’une première expérience professionnelle 
   pour mettre à profit mes compétences en développement backend.
 </p>
         <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">

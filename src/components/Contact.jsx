@@ -13,7 +13,7 @@ function Contact() {
   À la recherche d’une opportunité professionnelle
 </h3>
 <p className="text-gray-600 dark:text-gray-300 mb-6">
-  Ouvert aux postes en CDI, CDD ou stage, je souhaite mettre à profit mes
+ Je souhaite mettre à profit mes
   compétences en JavaScript, React, Node.js et MongoDB pour participer à la
   création d’applications performantes et sécurisées. N’hésitez pas à me
   contacter pour échanger sur vos projets ou besoins.
